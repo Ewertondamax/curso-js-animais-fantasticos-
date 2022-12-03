@@ -101,6 +101,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -219,4 +223,43 @@ body {
   .copy {
     margin-bottom: 0px;
   }
+}
+
+.js-tabconteudo section {
+  display: none;
+}
+
+.js-tabconteudo section.ativo {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: matrix3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: matrix3d(0, 0, 0);
+  }
+}
+
+.js-acordo dd {
+  display: none;
+}
+
+.js-acordo dt::after {
+  content: '⮧';
+  margin-left: 10px;
+}
+
+.js-acordo dt.ativo::after {
+  content: '⮥';
+  margin-left: 10px;
+}
+
+.js-acordo dd.ativo {
+  display: block;
 }
