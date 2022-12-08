@@ -60,6 +60,8 @@ body {
   padding: 10px;
   display: grid;
   grid-template-columns: 110px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
 }
 
 .titulo {
@@ -92,7 +94,7 @@ body {
 .animais p {
   font-family: Helvetica, Arial;
   line-height: 1.2;
-  margin: 1em;
+  margin-bottom: 1rem;
 }
 
 .animais-lista {
@@ -113,6 +115,10 @@ body {
   background: #FB5;
   border-left: 4px solid #faf6ed;
   border-right: 4px solid #faf6ed;
+}
+
+.animais-lista::-webkit-scrollbar-track {
+  background: #faf6ed;
 }
 
 .animais-descricao {
@@ -184,6 +190,7 @@ body {
   padding: 20px;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 @media(max-width:700px) {
