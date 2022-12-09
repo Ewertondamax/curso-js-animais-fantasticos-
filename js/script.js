@@ -29,7 +29,7 @@ function initAcordo() {
     acordoLista[0].nextElementSibling.classList.add(activoClass);
 
     function activeAcordo() {
-      this.classList.toggle("activoClass");
+      this.classList.toggle(activoClass);
       this.nextElementSibling.classList.toggle(activoClass);
     }
     acordoLista.forEach((item) => {
@@ -59,3 +59,24 @@ function initiScrollSuave() {
   }
 }
 initiScrollSuave();
+
+function initAnimacaoScroll() {
+  const section = document.querySelectorAll(".js-ecroll");
+  if (section.length) {
+    const windowMetade = window.innerHeight * 0.6;
+    function animaScroll() {
+      section.forEach(() => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - windowMetade > 0;
+        if (isSectionVisible) {
+          section.classList.add("ativo");
+        } else {
+          section.classList.remove("ativo");
+        }
+      });
+    }
+    animaScroll();
+    window.addEventListener("scroll", animaScroll);
+  }
+}
+initAnimacaoScroll();
