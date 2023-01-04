@@ -5,6 +5,9 @@ import initTabNav from "./modules/tabnav.js";
 import * as teste from "./modules/teste.js";
 import initModal from "./modules/modal.js";
 
+/*problema menu mobile */
+/*import initMenuMobile from "./modules/menu-mobile.js";*/
+
 teste.teste1();
 teste.teste2();
 console.log(teste.senha);
@@ -16,3 +19,4 @@ initAnimacaoScroll();
 initAccordion();
 initTabNav();
 initModal();
+/*initMenuMobile();*/
