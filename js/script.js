@@ -6,7 +6,8 @@ import * as teste from "./modules/teste.js";
 import initModal from "./modules/modal.js";
 
 /*problema menu mobile */
-/*import initMenuMobile from "./modules/menu-mobile.js";*/
+import initMenuMobile from "./modules/menu-mobile.js";
+import initFuncionamento from "./modules/funcionamento.js";
 
 teste.teste1();
 teste.teste2();
@@ -19,4 +20,5 @@ initAnimacaoScroll();
 initAccordion();
 initTabNav();
 initModal();
-/*initMenuMobile();*/
+initMenuMobile();
+initFuncionamento();

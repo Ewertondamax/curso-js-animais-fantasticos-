@@ -4,9 +4,7 @@ export default function outsidClick(element, event, callback) {
 
   if (!element.hasAtributte(outside)) {
     event.forEach((userEvent) => {
-      setTimeout(() => {
-        html.addEventListener("click", handleOutsideClick);
-      });
+      setTimeout(() => html.addEventListener(userEvent, handleOutsideClick));
     });
     element.setAttribute(outside, "");
   }
@@ -14,10 +12,7 @@ export default function outsidClick(element, event, callback) {
     if (!element.contains(event.target)) {
       element.removeAttribute(outside);
       event.forEach((userEvent) => {
-        html.addEventListener("click", handleOutsideClick);
-        event.forEach((userEvent) => {
-          html.addEventListener("click", handleOutsideClick);
-        });
+        html.removeEventListener(userEvent, handleOutsideClick);
       });
       callback();
     }
